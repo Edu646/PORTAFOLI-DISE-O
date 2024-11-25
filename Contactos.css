@@ -1,0 +1,136 @@
+/* Contenedor del formulario */
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    width: 35vw;
+    margin: 2rem auto;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    box-shadow: 0 0.75rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #5F2853;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Efectos de foco */
+input:focus {
+    border-color: #5F2853;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 0.5rem rgba(95, 40, 83, 0.3);
+}
+
+/* Estilos para inputs válidos */
+input:valid {
+    border-color: #4caf50;
+    background-color: #f0fff4;
+    color: #2e7d32;
+}
+
+/* Estilos para inputs inválidos */
+input:invalid {
+    border-color: #ff6347;
+    background-color: #fff5f5;
+    color: #c62828;
+}
+
+/* Mensajes de error */
+.error-message {
+    display: none;
+    font-family: 'Arial', sans-serif;
+    color: #ff6347;
+    font-size: 0.9rem;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+input:invalid + .error-message {
+    display: block;
+}
+
+/* Botones */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Botón Reset */
+button[type="reset"] {
+    background-color: #ff6347;
+    color: #ffffff;
+    margin-right: 1rem;
+}
+
+button[type="reset"]:hover {
+    background-color: #e5533d;
+    box-shadow: 0 0.5rem 1rem rgba(255, 99, 71, 0.3);
+}
+
+/* Botón Submit */
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    box-shadow: 0 0.5rem 1rem rgba(76, 175, 80, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90vw;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

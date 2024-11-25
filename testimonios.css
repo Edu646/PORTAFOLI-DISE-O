@@ -1,0 +1,109 @@
+/* Estilos generales del contenedor del carrusel */
+.testimonial-carousel-container {
+    position: relative;
+    width: 80vw; /* Ancho del 80% de la vista */
+    height: 40vh; /* Altura ajustada al 40% de la vista */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Carrusel de testimonios */
+.testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+    width: 100%; /* Ajustamos el contenedor a un 100% */
+    height: 100%;
+}
+
+/* Estilo para cada item del carrusel */
+.testimonial-carousel-item {
+    flex: 0 0 100%;  /* Cada testimonio ocupa el 100% del contenedor */
+    height: 100%; /* Cada item ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5F2853;
+    color: white;
+    padding: 2rem; /* Espaciado cómodo */
+    box-sizing: border-box;
+}
+
+/* Estilo del texto de los testimonios */
+.testimonial {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
+.author {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Estilo de las imágenes */
+.testimonial-carousel-item img {
+    width: 9rem; /* Establece un tamaño uniforme para todas las imágenes */
+    height: 6rem; /* Fija la altura a 6rem */
+    border-radius: 20em 20em 20em 20em; /* Las imágenes serán circulares */
+    object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+    margin-bottom: 1.5rem; /* Separación entre la imagen y el texto */
+}
+
+/* Media Query para dispositivos pequeños */
+@media (max-width: 48.75rem) {
+    .testimonial-carousel-container {
+        width: 90vw;
+        height: 45vh;
+    }
+
+    .testimonial-carousel-item {
+        padding: 1.5rem;
+    }
+
+    .testimonial {
+        font-size: 1rem;
+    }
+
+    .author {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar el tamaño de las imágenes para pantallas pequeñas */
+    .testimonial-carousel-item img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+/* Media Query para dispositivos más pequeños */
+@media (max-width: 30rem) {
+    .testimonial-carousel-container {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .testimonial-carousel-item {
+        padding: 1rem;
+    }
+
+    .testimonial {
+        font-size: 0.9rem;
+    }
+
+    .author {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustar el tamaño de las imágenes para pantallas muy pequeñas */
+    .testimonial-carousel-item img {
+        width: 4rem;
+        height: 4rem;
+    }
+}

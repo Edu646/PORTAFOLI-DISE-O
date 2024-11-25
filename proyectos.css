@@ -1,0 +1,70 @@
+.CONTENEDOR_PRO {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#proyecto {
+  text-align: center;
+  width: calc(33.33% - 20px); /* 3 elementos por fila, con margen entre ellos */
+  margin: 10px 0;
+}
+
+#proyecto img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción original */
+  max-width: 15em; /* Limita el tamaño máximo en pantallas grandes */
+  aspect-ratio: 16/9; /* Asegura que las imágenes sean rectangulares */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 1em;
+}
+
+#proyecto p {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+#proyecto:hover img {
+  transform: scale(1.1);
+}
+
+#proyecto:hover p {
+  opacity: 1;
+  background-color: aqua;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .CONTENEDOR_PRO {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #proyecto {
+    width: calc(50% - 20px); /* 2 elementos por fila en pantallas medianas */
+  }
+
+  #proyecto img {
+    max-width: 100%; /* Escala automáticamente según el contenedor */
+    border-radius: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .CONTENEDOR_PRO {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #proyecto {
+    width: calc(100% - 20px); /* 1 elemento por fila en pantallas pequeñas */
+  }
+
+  #proyecto img {
+    max-width: 100%; /* Escala automáticamente */
+    border-radius: 1em;
+  }
+}
